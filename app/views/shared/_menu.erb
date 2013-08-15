@@ -1,0 +1,29 @@
+<div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/?cleanup=1">KfcFloorball</a>
+
+          <ul class="nav">
+
+            	<% if (session[:selected_menu]=='signUp') %>
+                <li class="active"><%= link_to 'Feliratkozás'%></li>
+            	<% else %>
+                <li><%= link_to 'Feliratkozás'%></li>
+            	<% end %>
+
+
+
+            	<% if (session[:selected_menu]=='addResult') %>
+                <li class="active"><%= link_to 'Eredmények'%></li>
+            	<% else %>
+                <li><%= link_to 'Eredmények'%></li>
+            	<% end %>
+
+
+
+          </ul>
+    </div>
+  </div>
+</div>
+</div>
