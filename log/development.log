@@ -1505,3 +1505,342 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-15 09:41:56 
 
 
 Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2013-08-15 09:41:56 +0200
+  [1m[36m (23.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:21:15 +0200
+Processing by SignUpController#index as HTML
+  Rendered sign_up/index.html.erb within layouts/application (55.1ms)
+  Rendered shared/_menu.erb (3.2ms)
+  Rendered shared/_footer.erb (1.1ms)
+Completed 200 OK in 963ms (Views: 924.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:21:18 +0200
+Processing by SignUpController#index as HTML
+  Rendered sign_up/index.html.erb within layouts/application (0.2ms)
+  Rendered shared/_menu.erb (19.7ms)
+  Rendered shared/_footer.erb (0.1ms)
+Completed 200 OK in 208ms (Views: 205.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:18 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:18 +0200
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:18 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:18 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:19 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:20 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:20 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:20 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:20 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:20 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:20 +0200
+
+
+Started GET "/sign_up/index" for 127.0.0.1 at 2013-09-05 19:21:29 +0200
+Processing by SignUpController#index as HTML
+  Rendered sign_up/index.html.erb within layouts/application (0.1ms)
+  Rendered shared/_menu.erb (2.0ms)
+  Rendered shared/_footer.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:30 +0200
+
+
+Started GET "/sign_up/index" for 127.0.0.1 at 2013-09-05 19:21:31 +0200
+Processing by SignUpController#index as HTML
+  Rendered sign_up/index.html.erb within layouts/application (0.1ms)
+  Rendered shared/_menu.erb (16.4ms)
+  Rendered shared/_footer.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:32 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:21:34 +0200
+Processing by SignUpController#index as HTML
+  Rendered sign_up/index.html.erb within layouts/application (0.1ms)
+  Rendered shared/_menu.erb (1.3ms)
+  Rendered shared/_footer.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:34 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:34 +0200
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:34 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:21:35 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:22:23 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_menu.erb (2.8ms)
+  Rendered shared/_footer.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:22:24 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:23:12 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/sign_up.css?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:23:13 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:25:27 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 326ms (Views: 324.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:25:27 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:27 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:25:28 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:26:15 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 394ms (Views: 392.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/vendor/index.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/vendor/jquery-1.9.1.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/vendor/handlebars-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/vendor/ember-1.0.0.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/templates/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200
+
+
+Started GET "/assets/templates/events.js?body=1" for 127.0.0.1 at 2013-09-05 19:26:20 +0200

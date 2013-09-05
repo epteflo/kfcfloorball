@@ -8,24 +8,7 @@
 </head>
 <body>
 
-<%= render 'shared/menu' %>
-
-<div id="content">
-
-    <% flash.each do |name, msg| %>
-        <% unless name.to_s.eql? "timedout" %>
-            <div id="<%= name %>" class="alert <% if name.to_s == 'notice'%>alert-success<% else %>alert-error<% end %>">
-                <a class="close" data-dismiss="alert">..</a>
-                <%= msg %>
-            </div>
-        <% end %>
-    <% end %>
-
     <%= yield %>
-
-</div>
-
-<%= render 'shared/footer' %>
 
 </body>
 </html>

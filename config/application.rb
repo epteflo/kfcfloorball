@@ -21,3 +21,5 @@ module Kfcfloorball
     # config.i18n.default_locale = :de
   end
 end
+
+HandlebarsAssets::Config.ember = true

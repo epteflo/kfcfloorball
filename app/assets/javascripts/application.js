@@ -10,6 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+//= require vendor
+//= require_tree ./templates
 
+App = Ember.Application.create();
+
+App.Router.map(function() {
+  this.route('events');
+});
