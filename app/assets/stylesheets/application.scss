@@ -8,6 +8,47 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require 'bootstrap'
+ *= require 'flat-ui'
  *= require_self
- *= require_tree .
  */
+
+$cloud: #ECF0F1;
+$turquoise: #1ABC9C;
+$ASBESTOS: #7F8C8D;
+
+ul#match-list {
+  list-style-type: none;
+  li {
+    margin-bottom: 20px;
+  }
+
+  .result {
+    background-color: $turquoise;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .score {
+    font-size: 24px;
+    font-weight: bold
+  }
+
+  .date {
+    margin-top: 20px;
+    color: $ASBESTOS;
+  }
+
+  .black {
+    color: black;
+  }
+
+}
+
+
+.team {
+  font-size: 24px;
+  font-weight: bold;
+}
+

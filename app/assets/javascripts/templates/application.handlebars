@@ -1,31 +1,72 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Project name</a>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
+      <a href="#" class="navbar-brand">Floorball</a>
+
+      <div class="nav-collapse collapse in" id="nav-collapse-01">
+      </div>
     </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li>{{#link-to 'events'}}Events{{/link-to}}</li>
-      </ul>
-    </div><!--/.nav-collapse -->
   </div>
 </div>
 
 <div class="container">
-
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-
     {{outlet}}
-  </div>
+    <ul id="match-list">
+      <li>
+        <div class="row">
+          <div class="col-md-2 date text-right">2013. szept. 6.</div>
+          <div class="col-md-10 result">
+            <div class="row">
+              <div class="col-md-3 text-right team black">Fekete</div>
+              <div class="col-md-offset-2 col-md-1 score black">5</div>
+              <div class="col-md-1 score">3</div>
+              <div class="col-md-offset-2 col-md-3 team">Fehér</div>
+            </div>
+          </div>
+        </div>
+      </li>
 
+      <li>
+        <div class="row">
+          <div class="col-md-2 date text-right">2013. szept. 6.</div>
+          <div class="col-md-10 result">
+            <div class="row">
+              <div class="col-md-3 text-right team black">Fekete</div>
+              <div class="col-md-offset-2 col-md-1 score black">5</div>
+              <div class="col-md-1 score">3</div>
+              <div class="col-md-offset-2 col-md-3 team">Fehér</div>
+            </div>
+          </div>
+        </div>
+      </li>
 
+      <li>
+        <div class="row">
+          <div class="col-md-2 date text-right">2013. szept. 6.</div>
+          <div class="col-md-10 result">
+            <div class="row">
+              <div class="col-md-3 text-right team black">Fekete</div>
+              <div class="col-md-offset-2 col-md-1 score black">5</div>
+              <div class="col-md-1 score">3</div>
+              <div class="col-md-offset-2 col-md-3 team">Fehér</div>
+            </div>
+          </div>
+        </div>
+      </li>
 
-</div><!-- /.container -->
+      <li>
+        <div class="row">
+          <div class="col-md-2 date text-right">2013. szept. 6.</div>
+          <div class="col-md-10 result">
+            <div class="row">
+              <div class="col-md-3 text-right team black">Fekete</div>
+              <div class="col-md-offset-2 col-md-1 score black">5</div>
+              <div class="col-md-1 score">3</div>
+              <div class="col-md-offset-2 col-md-3 team">Fehér</div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+</div>
