@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20130907100429) do
     t.integer  "team_a_score"
     t.integer  "team_b_score"
     t.datetime "match_date"
+    t.datetime "deadline"
     t.integer  "limit"
     t.string   "state"
     t.string   "venue"
