@@ -23,7 +23,7 @@ App = Ember.Application.create({
   LOG_TRANSITIONS: true
 });
 
-/*https://github.com/emberjs/data/blob/master/TRANSITION.md#adapters*/
+// https://github.com/emberjs/data/blob/master/TRANSITION.md#adapters
 App.ApplicationSerializer = DS.RESTSerializer.extend({
   normalize: function(type, hash, property) {
     var normalized = {}, normalizedProp;
@@ -45,5 +45,28 @@ App.ApplicationSerializer = DS.RESTSerializer.extend({
     }
 
     return this._super(type, normalized, property);
-  }
+  },
+
+  attrs: {
+    teamAScore: 'team_a_score',
+    teamBScore: 'team_b_score'
+  },
+
+  serializeAttribute: function(record, json, key, attribute) {
+    var get = Ember.get;
+    var attrs = get(this, 'attrs');
+    var value = get(record, key), type = attribute.type;
+
+    if (type) {
+      var transform = this.transformFor(type);
+      value = transform.serialize(value);
+    }
+
+    // if provided, use the mapping provided by `attrs` in
+    // the serializer
+
+    key = attrs && attrs[key] || Ember.String.decamelize(key);
+
+    json[key] = value;
+  },
 });

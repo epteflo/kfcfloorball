@@ -24,7 +24,9 @@ App.MatchesNewRoute = Ember.Route.extend({
 
   deactivate: function() {
     var m = this.modelFor('matches.new');
-    m.deleteRecord();
+    if (m.get('isDirty')) {
+      m.deleteRecord();
+    }
   }
 });
 

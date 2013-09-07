@@ -8,14 +8,14 @@ App.MatchesIndexController = Em.ArrayController.extend({
 
 
 App.MatchesNewController = Em.ObjectController.extend({
-  startEditing: function() {
-    this.transaction = this.store.transaction();
-    this.set('content', this.transaction.createRecord('match', {matchDate: moment().add('days', 1).hour(7).minute(30).second(0).toDate()}));
-  },
-  stopEditing: function() {
-    if (this.transaction) {
-      this.transaction.rollback();
-      this.transaction = null;
+  actions: {
+    save: function() {
+      var me = this;
+      var model = this.get('model');
+      model.save().then(function(model) {
+        console.log('saved', model);
+        me.transitionToRoute('match', model);
+      });
     }
   }
 });
