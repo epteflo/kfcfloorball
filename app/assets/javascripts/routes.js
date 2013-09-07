@@ -1,8 +1,12 @@
 App.Router.map(function() {
   this.resource('matches', {path: "/"}, function(){
-    this.route('new')
+    this.route('new');
   });
   this.resource('match', {path: "/matches/:match_id"});
+  this.resource('users', {path: "/user"}, function(){
+    this.route('new');
+  });
+  this.resource('user', {path: "/users/:user_id"});
 });
 
 App.MatchesRoute = Ember.Route.extend({
@@ -36,3 +40,33 @@ App.MatchRoute = Ember.Route.extend({
   }
 });
 
+App.UsersRoute = Ember.Route.extend({
+  model: function(){
+    return this.get('store').find('user');
+  }
+});
+
+App.UsersIndexRoute = Ember.Route.extend({
+  model: function(){
+    return this.modelFor('users')
+  }
+});
+
+App.UsersNewRoute = Ember.Route.extend({
+  model: function() {
+    return this.get('store').createRecord('user');
+  },
+
+  deactivate: function() {
+    var m = this.modelFor('users.new');
+    if (m.get('isDirty')) {
+      m.deleteRecord();
+    }
+  }
+});
+
+App.UserRoute = Ember.Route.extend({
+  model: function(params){
+    return this.get('store').find('user',params.user_id);
+  }
+});

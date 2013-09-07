@@ -12,6 +12,7 @@ class UsersController < ActionController::Base
 
   def create
     user_to_save = User.new(user_params)
+    user_to_save.role ||= 'team_member'
     user_to_save.save
     render json: {user: user_to_save}
   end
@@ -41,7 +42,7 @@ class UsersController < ActionController::Base
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :nick, :role, :password, :login)
+      params.require(:user).permit(:name, :email, :nickname, :role, :password, :login)
     end
 
 end

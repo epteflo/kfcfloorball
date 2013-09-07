@@ -2,8 +2,9 @@
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
-      <a href="#" class="navbar-brand">Floorball</a>
-
+      {{#link-to 'matches' class='navbar-brand'}}Floorball{{/link-to}}
+      {{#link-to 'users' class='navbar-brand'}}Felhasználók{{/link-to}}
+      {{#link-to 'users.new' class='navbar-brand'}}Regisztrálok{{/link-to}}
       <div class="nav-collapse collapse in" id="nav-collapse-01">
       </div>
     </div>
