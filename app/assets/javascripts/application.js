@@ -19,7 +19,9 @@
 //= require routes
 //= require handlebars_helpers
 
-App = Ember.Application.create();
+App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
 
 /*https://github.com/emberjs/data/blob/master/TRANSITION.md#adapters*/
 App.ApplicationSerializer = DS.RESTSerializer.extend({

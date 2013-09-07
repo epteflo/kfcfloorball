@@ -19,16 +19,13 @@ App.MatchesIndexRoute = Ember.Route.extend({
 
 App.MatchesNewRoute = Ember.Route.extend({
   model: function() {
-    this.get('store').createRecord('match', {matchDate: moment().add('days', 1).hour(7).minute(30).second(0).toDate()});
-  }
+    return this.get('store').createRecord('match', {matchDate: moment().add('days', 1).hour(7).minute(30).second(0).toDate()});
+  },
 
-  /*deactivate: function() {
+  deactivate: function() {
     var m = this.modelFor('matches.new');
-    if (m.get('isDirty')) {
-      this.get('store').deleteRecord(m);
-    }
-    this._super();
-  }*/
+    m.deleteRecord();
+  }
 });
 
 App.MatchRoute = Ember.Route.extend({
