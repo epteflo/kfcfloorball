@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require vendor
+//= require_self
 //= require_tree ./templates
+//= require_tree ./models
+//= require_tree ./controllers
+//= require routes
+//= require handlebars_helpers
 
 App = Ember.Application.create();
-
-App.Router.map(function() {
-  this.route('events');
-});
