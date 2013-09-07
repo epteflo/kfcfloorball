@@ -7,7 +7,7 @@ App.Statistic = DS.Model.extend({
   points: function() {
     return (this.get('goals') || 0) + (this.get('assists') || 0)
   }.property('goals', 'assists'),
-  points_per_match: function() {
+  pointsPerMatch: function() {
     return this.get('points') === 0 ? 0 : Math.round(this.get('points') * 100 / this.get('matches')) / 100;
   }.property('points','matches')
 });
