@@ -2,8 +2,8 @@
 
 <ul id="match-list">
   {{#each arrangedContent}}
-    <li>
-      {{#link-to 'match' this tagName='div' class='row'}}
+    {{#link-to 'match' this tagName='li' class='row'}}
+      <div class="row">
         <div class="col-md-2 date text-right">{{day matchDate}}</div>
         <div class="col-md-8 result">
           <div class="row">
@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="col-md-2"></div>
-      {{/link-to}}
-    </li>
+      </div>
+    {{/link-to}}
   {{/each}}
 </ul>
