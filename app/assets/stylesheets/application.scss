@@ -36,7 +36,7 @@ ul#match-list {
   }
 
   .date {
-    margin-top: 20px;
+    padding: 24px;
     color: $ASBESTOS;
   }
 
@@ -44,11 +44,8 @@ ul#match-list {
     color: black;
   }
 
+  .team {
+    font-size: 24px;
+    font-weight: bold;
+  }
 }
-
-
-.team {
-  font-size: 24px;
-  font-weight: bold;
-}
-
