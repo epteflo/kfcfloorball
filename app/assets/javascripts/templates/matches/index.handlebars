@@ -1,0 +1,20 @@
+{{#link-to 'matches.new' class='btn'}}Új meccs{{/link-to}}
+
+<ul id="match-list">
+  {{#each model}}
+    <li>
+      {{#link-to 'match' this tagName='div' class='row'}}
+        <div class="col-md-2 date text-right">{{day matchDate}}</div>
+        <div class="col-md-8 result">
+          <div class="row">
+            <div class="col-xs-3 text-right team white">Fehér</div>
+            <div class="col-md-offset-2 col-xs-1 score white">{{teamAScore}}</div>
+            <div class="col-xs-1 score black">{{teamBScore}}</div>
+            <div class="col-md-offset-2 col-xs-3 team black">Fekete</div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>

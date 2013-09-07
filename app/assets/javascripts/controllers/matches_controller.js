@@ -1,5 +1,5 @@
 App.MatchesController = Em.ArrayController.extend({
-  actions: {
-  }
 });
 
+App.MatchesIndexController = Em.ArrayController.extend({
+});
