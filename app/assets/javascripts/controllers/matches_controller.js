@@ -19,3 +19,11 @@ App.MatchesNewController = Em.ObjectController.extend({
     }
   }
 });
+
+App.MatchController = Em.ObjectController.extend({
+  teamA: function() {
+    return this.get('checkins').filterProperty('team', 'A')
+  }.property('checkins.@each'),
+
+  teamB: Ember.computed.filterBy('checkins', 'team', 'B')
+})

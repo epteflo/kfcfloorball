@@ -1,3 +1,18 @@
-<h1>
-  {{day matchDate}}
-</h1>
+<h1>{{day matchDate}}</h1>
+
+<h2>Result: {{aScore}} : {{bScore}}</h2>
+
+<h3>Team A</h3>
+<ul>
+  {{#each teamA}}
+    <li>{{this.user.name}}</li>
+  {{/each}}
+</ul>
+
+
+<h3>Team B</h3>
+<ul>
+  {{#each teamB}}
+    <li>{{this.user.name}}</li>
+  {{/each}}
+</ul>

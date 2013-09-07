@@ -1,6 +1,7 @@
 class Match < ActiveRecord::Base
   has_many :checkins
   validates_presence_of :venue, :match_date, :limit, :state
+  attr_accessor :checkin_ids
 
   # To change this template use File | Settings | File Templates.
   def participants(team = nil)

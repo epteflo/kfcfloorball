@@ -5,5 +5,6 @@ App.Match = DS.Model.extend({
   deadline: DS.attr('date'),
   limit: DS.attr('number'),
   state: DS.attr('string'),
-  venue: DS.attr('string')
+  venue: DS.attr('string'),
+  checkins: DS.hasMany('checkin')
 });

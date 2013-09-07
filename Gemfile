@@ -44,4 +44,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'handlebars_assets'
+gem "active_model_serializers"
 
