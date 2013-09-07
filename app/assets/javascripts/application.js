@@ -63,5 +63,5 @@ App.ApplicationSerializer = DS.RESTSerializer.extend({
     key = attrs && attrs[key] || Ember.String.decamelize(key);
 
     json[key] = value;
-  },
+  }
 });

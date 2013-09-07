@@ -7,6 +7,7 @@ App.Router.map(function() {
     this.route('new');
   });
   this.resource('user', {path: "/users/:user_id"});
+  this.resource('statistics', {path: "/statistics"});
 });
 
 App.MatchesRoute = Ember.Route.extend({
@@ -68,5 +69,17 @@ App.UsersNewRoute = Ember.Route.extend({
 App.UserRoute = Ember.Route.extend({
   model: function(params){
     return this.get('store').find('user',params.user_id);
+  }
+});
+
+App.UsersRoute = Ember.Route.extend({
+  model: function(){
+    return this.get('store').find('statistic');
+  }
+});
+
+App.StatisticsRoute = Ember.Route.extend({
+  model: function(){
+    return this.get('store').find('statistic');
   }
 });
