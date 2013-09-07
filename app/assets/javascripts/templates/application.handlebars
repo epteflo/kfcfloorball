@@ -2,11 +2,14 @@
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
-      {{#link-to 'matches' class='navbar-brand'}}Floorball{{/link-to}}
-      {{#link-to 'users' class='navbar-brand'}}Felhasználók{{/link-to}}
-      {{#link-to 'statistics' class='navbar-brand'}}Statisztikák{{/link-to}}
-      {{#link-to 'users.new' class='navbar-brand'}}Regisztrálok{{/link-to}}
+      <a href="#" class="navbar-brand">Floorball</a>
       <div class="nav-collapse collapse in" id="nav-collapse-01">
+        <ul class="nav">
+          <li>{{#link-to 'matches' class='navbar-brand'}}Mérkőzések{{/link-to}}</li>
+          <li>{{#link-to 'users' class='navbar-brand'}}Felhasználók{{/link-to}}</li>
+          <li>{{#link-to 'statistics' class='navbar-brand'}}Statisztikák{{/link-to}}</li>
+          <li>{{#link-to 'users.new' class='navbar-brand'}}Regisztrálok{{/link-to}}</li>
+        </ul>
       </div>
     </div>
   </div>

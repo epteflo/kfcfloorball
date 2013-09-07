@@ -16,20 +16,23 @@
 $cloud: #ECF0F1;
 $turquoise: #1ABC9C;
 $ASBESTOS: #7F8C8D;
+$green-sea: #16A085;
+$silver: #BDC3C7;
+$peter: #3498DB;
+$emerald: #2ECC71;
 
-ul#match-list {
-  list-style-type: none;
-  li {
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
+body {
+  background-color: white;
+}
 
-  .result {
-    background-color: $turquoise;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-  }
+.match-result {
+  cursor: pointer;
+  background-color: $emerald;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 3px;
+
+
 
   .score {
     font-size: 24px;
@@ -37,7 +40,6 @@ ul#match-list {
   }
 
   .date {
-    padding: 24px;
     color: $ASBESTOS;
   }
 
@@ -48,5 +50,24 @@ ul#match-list {
   .team {
     font-size: 24px;
     font-weight: bold;
+  }
+}
+
+  .white {
+    color: white;
+  }
+
+  .black {
+    color: black;
+  }
+
+.teams {
+  font-size: 16px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  li {
+    padding: 3px;
   }
 }

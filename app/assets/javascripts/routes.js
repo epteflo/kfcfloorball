@@ -37,7 +37,18 @@ App.MatchesNewRoute = Ember.Route.extend({
 
 App.MatchRoute = Ember.Route.extend({
   model: function(params){
-    return this.get('store').find('match',params.match_id);
+    var store = this.get('store')
+    return store.find('match',params.match_id);
+  },
+
+  setupController: function(controller, model) {
+    controller.set('model', model);
+    // Ha a checkin-ek száma 0, akkor feltételezzük, hogy még nem tötltődött be
+    // teljesen.
+    if (model.get('checkins.length') === 0) {
+      model.reload();
+    }
+    return;
   }
 });
 

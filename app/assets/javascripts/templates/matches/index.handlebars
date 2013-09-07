@@ -1,20 +1,25 @@
-{{#link-to 'matches.new' class='btn'}}Új meccs{{/link-to}}
-
-<ul id="match-list">
-  {{#each arrangedContent}}
-    {{#link-to 'match' this tagName='li' class='row'}}
+<div class="row">
+  <div class="col-md-2">
+    {{#link-to 'matches.new' class='btn'}}Új mérkőzés{{/link-to}}
+  </div>
+  <div class="col-md-10">
+    {{#each arrangedContent}}
       <div class="row">
-        <div class="col-md-2 date text-right">{{day matchDate}}</div>
-        <div class="col-md-8 result">
-          <div class="row">
-            <div class="col-xs-3 text-right team white">Fehér</div>
-            <div class="col-md-offset-2 col-xs-1 score white">{{aScore}}</div>
-            <div class="col-xs-1 score black">{{bScore}}</div>
-            <div class="col-md-offset-2 col-xs-3 team black">Fekete</div>
-          </div>
+        <div class="col-md-1">{{day matchDate}}</div>
+        <div class="col-md-11">
+          {{#link-to 'match' this.id tagName='div' class='row match-result'}}
+            <div class="col-md-2 date text-right"></div>
+            <div class="col-md-8 result">
+              <div class="row">
+                <div class="col-xs-3 text-right team white">Fehér</div>
+                <div class="col-md-offset-2 col-xs-1 score white">{{aScore}}</div>
+                <div class="col-xs-1 score black">{{bScore}}</div>
+                <div class="col-md-offset-2 col-xs-3 team black">Fekete</div>
+              </div>
+            </div>
+          {{/link-to}}
         </div>
-        <div class="col-md-2"></div>
       </div>
-    {{/link-to}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </div>
+</div>
