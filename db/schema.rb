@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907150828) do
+ActiveRecord::Schema.define(version: 20130907201953) do
 
   create_table "checkins", force: true do |t|
     t.string  "state"
@@ -27,10 +27,11 @@ ActiveRecord::Schema.define(version: 20130907150828) do
     t.integer  "a_score"
     t.integer  "b_score"
     t.datetime "match_date"
-    t.datetime "deadline"
     t.integer  "limit"
     t.string   "state"
     t.string   "venue"
+    t.datetime "deadline"
+    t.string   "distribution_mode"
   end
 
   create_table "users", force: true do |t|
