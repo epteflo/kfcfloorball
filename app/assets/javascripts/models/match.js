@@ -10,13 +10,13 @@ App.Match = DS.Model.extend({
 
 App.Match.FIXTURES = [
   {
-    id: 3,
+    id: 1000,
     teamAScore: 33,
     teamBScore: 27,
     matchDate: "2013-09-06"
   },
   {
-    id: 2,
+    id: 1001,
     teamAScore: 10,
     teamBScore: 13,
     matchDate: "2013-08-31"
