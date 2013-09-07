@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907100429) do
+ActiveRecord::Schema.define(version: 20130907150828) do
 
   create_table "checkins", force: true do |t|
     t.string  "state"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20130907100429) do
   end
 
   create_table "matches", force: true do |t|
-    t.integer  "team_a_score"
-    t.integer  "team_b_score"
+    t.integer  "a_score"
+    t.integer  "b_score"
     t.datetime "match_date"
     t.datetime "deadline"
     t.integer  "limit"

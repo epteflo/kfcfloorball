@@ -47,11 +47,6 @@ App.ApplicationSerializer = DS.RESTSerializer.extend({
     return this._super(type, normalized, property);
   },
 
-  attrs: {
-    teamAScore: 'team_a_score',
-    teamBScore: 'team_b_score'
-  },
-
   serializeAttribute: function(record, json, key, attribute) {
     var get = Ember.get;
     var attrs = get(this, 'attrs');
