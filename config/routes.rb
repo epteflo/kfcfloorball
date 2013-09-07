@@ -15,6 +15,8 @@ Kfcfloorball::Application.routes.draw do
 
   resources :users, :only => [:create, :update, :show, :index]
 
+  get 'statistics' => 'statistics#show', as: :show_statistics
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
