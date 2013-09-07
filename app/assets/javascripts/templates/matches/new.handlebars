@@ -1,1 +1,19 @@
-Dátum: {{input type='text' value=matchDate placeholder='Írd be a dátumot'}}
+<div class="row">
+  <div class="col-md-6 col-md-3-offset">
+    <form role="form">
+      <div class="form-group">
+        <label for="formMatchDate">Meccs dátuma</label>
+        {{input type='text' class="form-control" value=matchDate id='formMatchDate' placeholder='Írd be a dátumot'}}
+      </div>
+      <div class="form-group">
+        <label for="formVenue">Helyszín</label>
+        {{input type='text' class="form-control" value=venue id='formVenue' placeholder='Írd be a helyszínt'}}
+      </div>
+      <div class="form-group">
+        <label for="formLimit">Limit</label>
+        {{input type='text' class="form-control" value=limit id='formLimit' placeholder='Írd be a limitet'}}
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
