@@ -1,3 +1,3 @@
 Ember.Handlebars.registerBoundHelper('day', function(value){
-  return moment(value).format('LL');
+  return Em.isEmpty(value) ? '' : moment(value).format('LL');
 });

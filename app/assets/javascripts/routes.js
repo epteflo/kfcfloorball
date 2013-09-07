@@ -11,7 +11,7 @@ App.MatchesRoute = Ember.Route.extend({
 
 App.MatchRoute = Ember.Route.extend({
   model: function(params){
-    return this.get('store').findAll('match',params.match_id);
+    return this.get('store').find('match',params.match_id);
   }
 });
 
