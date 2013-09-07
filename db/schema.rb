@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907092638) do
+ActiveRecord::Schema.define(version: 20130907100429) do
 
   create_table "checkins", force: true do |t|
     t.string  "state"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20130907092638) do
     t.integer "assist"
     t.string  "team"
     t.integer "order_in_team"
+    t.integer "user_id"
+    t.integer "match_id"
   end
 
   create_table "matches", force: true do |t|
@@ -35,6 +37,8 @@ ActiveRecord::Schema.define(version: 20130907092638) do
     t.string "email"
     t.string "nickname"
     t.string "role"
+    t.string "password"
+    t.string "login"
   end
 
 end
