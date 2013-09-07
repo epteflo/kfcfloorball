@@ -1,5 +1,3 @@
-var MATCHES = [App.Match.create({id: 1, title:"Első meccs"}), App.Match.create({id: 2, title:"Második meccs"})];
-
 App.Router.map(function() {
   this.resource('matches', {path: "/"});
   this.resource('match', {path: "/matches/:match_id"});
@@ -7,13 +5,13 @@ App.Router.map(function() {
 
 App.MatchesRoute = Ember.Route.extend({
   model: function(){
-    return MATCHES;
+    return this.get('store').findAll('match');
   }
 });
 
 App.MatchRoute = Ember.Route.extend({
   model: function(params){
-    return MATCHES[params.match_id-1];
+    return this.get('store').findAll('match',params.match_id);
   }
 });
 
