@@ -1,22 +1,20 @@
-<ul id="statistic-list">
-  {{#each arrangedContent}}
-  {{#link-to 'user' user tagName='li' class='row'}}
-  <div class="row">
-    <div class="col-md-1 date text-right">{{user.nickname}}</div>
-    <div class="col-md-9 result">
-      <div class="row">
-        <div class="col-xs-1">Gól:</div>
-        <div class="col-xs-1">{{goals}}</div>
-        <div class="col-xs-1">Assist:</div>
-        <div class="col-xs-1">{{assists}}</div>
-        <div class="col-xs-1">Pont:</div>
-        <div class="col-xs-1">{{points}}</div>
-        <div class="col-xs-2">Pont/meccs:</div>
-        <div class="col-xs-1">{{pointsPerMatch}}</div>
-      </div>
-    </div>
-    <div class="col-md-2"></div>
-  </div>
-  {{/link-to}}
-  {{/each}}
-</ul>
+<table class="table">
+  <thead>
+    <th>Becenév</th>
+    <th>Gólok</th>
+    <th>Gólpasszok</th>
+    <th>Pont</th>
+    <th>Pont / Meccs</th>
+  </thead>
+  <tbody>
+    {{#each arrangedContent}}
+      <tr>
+        <td>{{#link-to 'user' user}}{{user.nickname}}{{/link-to}}</td>
+        <td>{{goals}}</td>
+        <td>{{assists}}</td>
+        <td>{{points}}</td>
+        <td>{{pointsPerMatch}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
