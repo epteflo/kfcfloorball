@@ -17,6 +17,12 @@ App.MatchesIndexRoute = Ember.Route.extend({
   }
 });
 
+App.MatchesNewRoute = Ember.Route.extend({
+  model: function(){
+    return this.get('store').createRecord('match',{matchDate: new Date()});
+  }
+});
+
 App.MatchRoute = Ember.Route.extend({
   model: function(params){
     return this.get('store').find('match',params.match_id);
