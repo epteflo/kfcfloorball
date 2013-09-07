@@ -1,6 +1,6 @@
 class MatchesController < ActionController::Base
   def index
-    matches = Match.all()
+    matches = Match.order("id desc")
     render json: {matches: matches}
   end
 
