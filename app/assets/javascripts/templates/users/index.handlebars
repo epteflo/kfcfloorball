@@ -1,17 +1,20 @@
-<ul id="user-list">
-  {{#each arrangedContent}}
-  {{#link-to 'user' this tagName='li' class='row'}}
-  <div class="row">
-    <div class="col-md-1 date text-right">{{nickname}}</div>
-    <div class="col-md-9 result">
-      <div class="row">
-        <div class="col-xs-3">{{name}}</div>
-        <div class="col-xs-4">{{email}}</div>
-        <div class="col-xs-2">{{role}}</div>
-      </div>
-    </div>
-    <div class="col-md-2"></div>
-  </div>
-  {{/link-to}}
-  {{/each}}
-</ul>
+<table class="table">
+  <thead>
+    <th>ID</th>
+    <th>Becenév</th>
+    <th>Név</th>
+    <th>Email cím</th>
+    <th>Szerepkör</th>
+  </thead>
+  <tbody>
+    {{#each arrangedContent}}
+    <tr>
+      <td>{{#link-to 'user' this}}# {{id}}{{/link-to}}</td>
+      <td>{{nickname}}</td>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{role}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
