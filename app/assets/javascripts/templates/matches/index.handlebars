@@ -1,22 +1,17 @@
 <div class="row">
   <div class="col-md-2">
-    {{#link-to 'matches.new' class='btn'}}Új mérkőzés{{/link-to}}
+    {{#link-to 'matches.new' class='btn btn-info'}}Új mérkőzés{{/link-to}}
   </div>
   <div class="col-md-10">
     {{#each arrangedContent}}
       <div class="row">
-        <div class="col-md-1">{{day matchDate}}</div>
-        <div class="col-md-11">
+        <div class="col-md-2 match-date">{{day matchDate}}</div>
+        <div class="col-md-10">
           {{#link-to 'match' this.id tagName='div' class='row match-result'}}
-            <div class="col-md-2 date text-right"></div>
-            <div class="col-md-8 result">
-              <div class="row">
-                <div class="col-xs-3 text-right team white">Fehér</div>
-                <div class="col-md-offset-2 col-xs-1 score white">{{aScore}}</div>
-                <div class="col-xs-1 score black">{{bScore}}</div>
-                <div class="col-md-offset-2 col-xs-3 team black">Fekete</div>
-              </div>
-            </div>
+            <div class="col-xs-3 text-right team white">Fehér</div>
+            <div class="col-md-offset-2 col-xs-1 score white">{{aScore}}</div>
+            <div class="col-xs-1 score black">{{bScore}}</div>
+            <div class="col-md-offset-2 col-xs-3 team black">Fekete</div>
           {{/link-to}}
         </div>
       </div>

@@ -38,15 +38,9 @@ ul {
   margin: 10px;
   border-radius: 3px;
 
-
-
   .score {
     font-size: 24px;
     font-weight: bold
-  }
-
-  .date {
-    color: $ASBESTOS;
   }
 
   .black {
@@ -64,6 +58,11 @@ ul {
   color: $abestos;
   padding: 20px;
   border-radius: 5px;
+}
+
+.match-date {
+  color: $ASBESTOS;
+  padding: 20px;
 }
 
 .white {

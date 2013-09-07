@@ -18,3 +18,7 @@ Ember.Handlebars.registerBoundHelper('number-with-icon', function(number, option
   return Ember.String.htmlSafe(out);
 });
 
+Ember.Handlebars.registerHelper('icon', function(name) {
+  var out = "<i class='glyphicon glyphicon-%@'></i> ".fmt(name);
+  return Ember.String.htmlSafe(out);
+});

@@ -2,7 +2,7 @@ class MatchesController < ActionController::Base
   respond_to :json
 
   def index
-    matches = Match.where('state!="deleted"').order("id desc").limit(5)
+    matches = Match.where('state!="deleted"').order("id desc").limit(25)
     render json: {matches: matches}
   end
 
