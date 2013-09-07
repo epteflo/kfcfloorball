@@ -3,16 +3,18 @@
     {{#link-to 'matches.new' class='btn btn-info'}}Új mérkőzés{{/link-to}}
   </div>
   <div class="col-md-10">
-    {{#each arrangedContent}}
+    {{#each arrangedContent itemController='match'}}
       <div class="row">
-        <div class="col-md-2 match-date">{{day matchDate}}</div>
+        <div class="col-md-2 match-date">
+          {{day matchDate}} <br>
+          {{state}}
+        </div>
         <div class="col-md-10">
-          {{#link-to 'match' this.id tagName='div' class='row match-result'}}
-            <div class="col-xs-3 text-right team white">Fehér</div>
-            <div class="col-md-offset-2 col-xs-1 score white">{{aScore}}</div>
-            <div class="col-xs-1 score black">{{bScore}}</div>
-            <div class="col-md-offset-2 col-xs-3 team black">Fekete</div>
-          {{/link-to}}
+          {{#if isStateRSVP}}
+            {{partial 'matches/state_rsvp'}}
+          {{else}}
+            {{partial 'matches/state_played'}}
+          {{/if}}
         </div>
       </div>
     {{/each}}

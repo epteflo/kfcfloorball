@@ -21,6 +21,11 @@ $green-sea: #16A085;
 $silver: #BDC3C7;
 $peter: #3498DB;
 $emerald: #2ECC71;
+$pumpkin: #D35400;
+$sunflower: #F1C40F;
+$wet: #34495E;
+$carrot: #E67E22;
+$orange: #F39C12;
 
 body {
   background-color: white;
@@ -31,12 +36,19 @@ ul {
   padding: 0;
 }
 
-.match-result {
+.match {
   cursor: pointer;
-  background-color: $emerald;
   padding: 10px;
   margin: 10px;
-  border-radius: 3px;
+  border-radius: 6px;
+}
+
+.match-rsvp {
+  background-color: $wet;
+}
+
+.match-result {
+  background-color: $orange;
 
   .score {
     font-size: 24px;

@@ -1,5 +1,5 @@
 Ember.Handlebars.registerBoundHelper('day', function(value){
-  return Em.isEmpty(value) ? '' : moment(value).format('LL');
+  return Em.isEmpty(value) ? '' : moment(value).format('ll');
 });
 
 Ember.Handlebars.registerBoundHelper('repeat-icon', function(count, options) {
