@@ -11,6 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130907092638) do
+
+  create_table "checkins", force: true do |t|
+    t.string  "state"
+    t.integer "goal"
+    t.integer "assist"
+    t.string  "team"
+    t.integer "order_in_team"
+  end
+
+  create_table "matches", force: true do |t|
+    t.integer  "team_a_score"
+    t.integer  "team_b_score"
+    t.datetime "match_date"
+    t.integer  "limit"
+    t.string   "state"
+    t.string   "venue"
+  end
+
+  create_table "users", force: true do |t|
+    t.string "name"
+    t.string "email"
+    t.string "nickname"
+    t.string "role"
+  end
 
 end
