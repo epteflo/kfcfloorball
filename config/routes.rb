@@ -8,6 +8,8 @@ Kfcfloorball::Application.routes.draw do
 
   root 'application#index'
 
+  resources :matches
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
