@@ -17,6 +17,7 @@ class MatchesController < ActionController::Base
 
   def create
     match_to_save = Match.new(match_params)
+    match_to_save.state='RSVP';
     match_to_save.save
     render json: {match: match_to_save}
   end
