@@ -13,7 +13,8 @@
  *= require_self
  */
 
-$cloud: #ECF0F1;
+$clouds: #ECF0F1;
+$abestos: #7F8C8D;
 $turquoise: #1ABC9C;
 $ASBESTOS: #7F8C8D;
 $green-sea: #16A085;
@@ -23,6 +24,11 @@ $emerald: #2ECC71;
 
 body {
   background-color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .match-result {
@@ -53,13 +59,20 @@ body {
   }
 }
 
-  .white {
-    color: white;
-  }
+.match-detail {
+  background-color: $clouds;
+  color: $abestos;
+  padding: 20px;
+  border-radius: 5px;
+}
 
-  .black {
-    color: black;
-  }
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
 
 .teams {
   font-size: 16px;

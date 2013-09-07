@@ -6,5 +6,6 @@ App.Match = DS.Model.extend({
   limit: DS.attr('number'),
   state: DS.attr('string'),
   venue: DS.attr('string'),
+  distributionMode: DS.attr('string'),
   checkins: DS.hasMany('checkin')
 });

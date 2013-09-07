@@ -1,0 +1,16 @@
+<div class="col-md-6 col-md-offset-2">
+  <ul>
+    {{#each checkins}}
+      <li class="row">
+        <div class="col-md-6">
+          <i class="glyphicon glyphicon-user"></i>
+          {{user.name}}
+        </div>
+        <div class="col-md-6">
+          {{number-with-icon goal icon='star'}}
+          {{number-with-icon assist icon='half-star'}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>
