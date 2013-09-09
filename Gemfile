@@ -42,7 +42,8 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 gem 'handlebars_assets'
 gem "active_model_serializers"
 
+gem 'devise'

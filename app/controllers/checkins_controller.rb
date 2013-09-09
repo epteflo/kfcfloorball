@@ -1,4 +1,4 @@
-class CheckinsController < ActionController::Base
+class CheckinsController < ApplicationController
 
   def create
     match_id = params[:id]

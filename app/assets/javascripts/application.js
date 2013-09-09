@@ -19,6 +19,12 @@
 //= require routes
 //= require handlebars_helpers
 
+$.ajaxPrefilter( function( options, originalOptions, xhr ) {
+  if (localStorage.authToken) {
+    xhr.setRequestHeader('X-Auth-Token', localStorage.authToken)
+  }
+});
+
 App = Ember.Application.create({
   LOG_TRANSITIONS: true
 });

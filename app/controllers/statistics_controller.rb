@@ -1,4 +1,4 @@
-class StatisticsController < ActionController::Base
+class StatisticsController < ApplicationController
 
   def show
     #statistics = Checkin.group('user_id').sum(:goal, :assist)

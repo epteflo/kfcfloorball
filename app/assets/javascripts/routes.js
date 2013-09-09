@@ -1,13 +1,82 @@
 App.Router.map(function() {
-  this.resource('matches', {path: "/"}, function(){
-    this.route('new');
+  this.resource('authenticated', {path: "/"}, function(){
+    this.resource('matches', {path: "/"}, function(){
+      this.route('new');
+    });
+    this.resource('match', {path: "/matches/:match_id"});
+    this.resource('users', {path: "/users"}, function(){
+      this.route('new');
+    });
+    this.resource('user', {path: "/users/:user_id"});
+    this.resource('statistics', {path: "/statistics"});
   });
-  this.resource('match', {path: "/matches/:match_id"});
-  this.resource('users', {path: "/users"}, function(){
-    this.route('new');
-  });
-  this.resource('user', {path: "/users/:user_id"});
-  this.resource('statistics', {path: "/statistics"});
+  this.route('login');
+  this.route('registration');
+});
+
+App.ApplicationRoute = Ember.Route.extend({
+  actions: {
+    error: function(error, transition) {
+      if (error.status.toString() === "401") {
+        this.controllerFor('login').set('errorMessage', "Jelentkezz be!!!");
+        this.transitionTo('login');
+      }
+    },
+
+    logout: function() {
+      this.controllerFor('application').doLogout();
+      delete localStorage.authToken;
+      this.transitionTo('login');
+    }
+  }
+});
+
+App.AuthenticatedRoute = Ember.Route.extend({
+  beforeModel: function(transition) {
+    var applicationController = this.controllerFor('application');
+
+    // or check a cookie, or other state
+    if (!localStorage.authToken || !localStorage.user) {
+      applicationController.set('savedTransition', transition);
+      this.transitionTo('login');
+    } else {
+      this.controllerFor('application').login();
+    }
+  }
+});
+
+App.LoginRoute = Ember.Route.extend({
+  actions: {
+    login: function() {
+      var loginController = this.controllerFor('login'),
+          applicationController = this.controllerFor('application'),
+          email = loginController.get('email'),
+          password = loginController.get('password')
+          me = this;
+
+      $.post('/users/sign_in',
+        {user: {email: email, password: password}}
+      ).done(function(result) {
+        localStorage.authToken = result.user.authentication_token;
+        localStorage.user = JSON.stringify(result.user);
+
+        var transition = applicationController.get('savedTransition');
+
+        // set isLoggedIn so the UI shows the logout button
+        applicationController.login();
+
+        // if the user was going somewhere, send them along, otherwise
+        // default to `/posts`
+        if (transition) {
+          transition.retry();
+        } else {
+          me.transitionTo('matches');
+        }
+      }).fail(function(result){
+        loginController.set('errorMessage', 'Hibás jelszó vagy felhasználónév.')
+      });
+    }
+  }
 });
 
 App.MatchesRoute = Ember.Route.extend({

@@ -4,11 +4,21 @@
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
       <a href="#" class="navbar-brand">Floorball</a>
       <div class="nav-collapse collapse in" id="nav-collapse-01">
-        <ul class="nav">
-          <li>{{#link-to 'matches' class='navbar-brand'}}Mérkőzések{{/link-to}}</li>
-          <li>{{#link-to 'users' class='navbar-brand'}}Felhasználók{{/link-to}}</li>
-          <li>{{#link-to 'statistics' class='navbar-brand'}}Statisztikák{{/link-to}}</li>
-          <li>{{#link-to 'users.new' class='navbar-brand'}}Regisztrálok{{/link-to}}</li>
+        {{#if currentUser}}
+          <ul class="nav">
+            <li>{{#link-to 'matches' class='navbar-brand'}}Mérkőzések{{/link-to}}</li>
+            <li>{{#link-to 'users' class='navbar-brand'}}Felhasználók{{/link-to}}</li>
+            <li>{{#link-to 'statistics' class='navbar-brand'}}Statisztikák{{/link-to}}</li>
+          </ul>
+        {{/if}}
+        <ul class="nav pull-right">
+          {{#if currentUser}}
+            <li>{{#link-to 'user' currentUser}}{{currentUser.name}}{{/link-to}}</li>
+            <li><a href="#" {{action 'logout'}}>Kijelentkezés</a></li>
+          {{else}}
+            <li>{{#link-to 'login' class='navbar-brand'}}Bejelentkezés{{/link-to}}</li>
+            <li>{{#link-to 'registration' class='navbar-brand'}}Regisztráció{{/link-to}}</li>
+          {{/if}}
         </ul>
       </div>
     </div>
