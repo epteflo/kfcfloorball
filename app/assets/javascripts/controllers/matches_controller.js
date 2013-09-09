@@ -21,9 +21,21 @@ App.MatchesNewController = Em.ObjectController.extend({
 });
 
 App.MatchController = Em.ObjectController.extend({
-  okCheckins: Ember.computed.filterBy('checkins', 'state', 'ok'),
-  teamA: Ember.computed.filterBy('okCheckins', 'team', 'A'),
-  teamB: Ember.computed.filterBy('okCheckins', 'team', 'B'),
+  // okCheckins: Ember.computed.filterBy('model.checkins', 'state', 'ok'),
+  // teamA: Ember.computed.filterBy('okCheckins', 'team', 'A'),
+  // teamB: Ember.computed.filterBy('okCheckins', 'team', 'B'),
+
+  okCheckins: function() {
+    return this.get('checkins').filterBy('state', 'ok');
+  }.property('checkins.@each'),
+
+  teamA: function() {
+    return this.get('okCheckins').filterBy('team', 'A');
+  }.property('okCheckins.@each'),
+
+  teamB: function() {
+    return this.get('okCheckins').filterBy('team', 'B');
+  }.property('okCheckins.@each'),
 
   isDistributionOnField: Em.computed.equal('distributionMode', 'onfield'),
   isDistributionOnWeighted: Em.computed.equal('distributionMode', 'weighted'),
