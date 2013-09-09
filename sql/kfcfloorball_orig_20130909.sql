@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: sql5.ultraweb.hu:3306
--- Létrehozás ideje: 2013. Szept 09. 17:25
+-- Létrehozás ideje: 2013. Szept 09. 17:43
 -- Szerver verzió: 4.1.22
 -- PHP Verzió: 5.2.6
 
@@ -265,20 +265,20 @@ INSERT INTO `users` (`id`, `login`, `nick`, `password`, `email`, `fullname`, `ro
 (21, 'epteorb', 'OPeti', 'fc739bfba07b68fba08e0ef461ae9b7b', 'peterorban81@gmail.com', 'Orbán Péter', 'admin'),
 (89, 'egbonaf', 'egbonaf', '201016e8206a5f42aa527090511504d5', 'naftzy@gmail.com', 'Gabor Naftz', 'team_member'),
 (23, 'kistlaszlo', 'Laci', '4aa1e47e8ee61d722a9d5d30c3c8f9f6', 'kistlaszlo@gmail.com', 'Kis Tóth Laci', 'team_member'),
-(88, 'guest6', 'guest6', 'b11f242a93ad61214f1b3d3625056996', 'g', 'guest6', 'team_member'),
+(88, 'guest6', 'guest6', 'b11f242a93ad61214f1b3d3625056996', 'guest6', 'guest6', 'team_member'),
 (43, 'dummy', 'dummy', '275876e34cf609db118f3d84b799a790', 'hidralika@gmail.com', 'dummy', 'team_member'),
 (66, 'csikszem', 'adrian', 'e10adc3949ba59abbe56e057f20f883e', 'betonfogsor@gmail.com', 'Kovács Adrián', 'admin'),
 (38, 'sztomasz', 'szt', 'd012c5116caa46249926bbf8d7fca31c', 'szalka-tamas@t-online.hu', 'Szálka Tamás', 'team_member'),
 (29, 'goodzi', 'goodzi', '7cbb3252ba6b7e9c422fac5334d22054', 'goodzi@gmail.com', 'Bokor László', 'team_member'),
 (31, 'KZoli', 'KZoli', 'e32e22e534ce42bf11a9236e34fffbd5', 'zoltan.kanizsai@gmail.com', 'Kanizsai Zoltán', 'team_member'),
-(87, 'guest5', 'guest5', '1ba562cc025376a90f12a9ec337cf67a', 'g', 'guest5', 'team_member'),
+(87, 'guest5', 'guest5', '1ba562cc025376a90f12a9ec337cf67a', 'guest5', 'guest5', 'team_member'),
 (42, 'eattpst', 'Sajt', '02e4e059ba1955936f8ee41a8ce93475', 'pasti.attila@upcmail.hu', 'Pásti Attila', 'team_member'),
-(86, 'guest4', 'guest4', '0c2f95edb0b3757e49dcf01e219914eb', 'g', 'guest4', 'team_member'),
+(86, 'guest4', 'guest4', '0c2f95edb0b3757e49dcf01e219914eb', 'guest4', 'guest4', 'team_member'),
 (44, 'ethpog', 'Gergo', '9d7db2f384010db4bca312b38d24d4e8', 'polesin@freemail.hu', 'Polesinszky Gergely', 'team_member'),
 (45, 'nszabi', 'Dzaaaaabi', 'e802fc8ca8d3ee5f91008d8e1ba5c73f', 'nszabi', 'Novaczki Szabi', 'team_member'),
 (65, 'guest1', 'guest1', '15dac3875ad0f994a832043be841dc7e', 'guest1', 'guest1', 'team_member'),
 (69, 'guest2', 'guest2', 'c4e799fad53c0dec94d4f201a4dd5e78', 'guest2', 'guest2', 'team_member'),
-(85, 'guest3', 'guest3', '800e07f96539ce15ae6bf604dd9cc73f', 'g', 'guest3', 'team_member'),
+(85, 'guest3', 'guest3', '800e07f96539ce15ae6bf604dd9cc73f', 'guest3', 'guest3', 'team_member'),
 (84, 'ezoltna', 'ezoltna', '203b20a9778e0005e6d85665e3614de1', 'ezoltna@gmail.com', 'ezoltna', 'team_member'),
 (52, 'bmiki', 'Mike', 'b885fc5454ad92826e9d64f3dd0d3365', 'miklos.bali@gmail.com', 'Bali Miklós', 'admin'),
 (53, 'Szeri', 'Szeri', 'c3e39bf9f009b801037846853bfa9f2c', 'szeri1@freestart.hu', 'Szerencse Balázs', 'team_member'),
