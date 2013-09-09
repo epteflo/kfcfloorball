@@ -5,7 +5,6 @@ App.Router.map(function() {
     });
     this.resource('match', {path: "/matches/:match_id"});
     this.resource('users', {path: "/users"}, function(){
-      this.route('new');
     });
     this.resource('user', {path: "/users/:user_id"});
     this.resource('statistics', {path: "/statistics"});
@@ -127,19 +126,13 @@ App.UsersRoute = Ember.Route.extend({
   }
 });
 
-App.UsersIndexRoute = Ember.Route.extend({
-  model: function(){
-    return this.modelFor('users')
-  }
-});
-
-App.UsersNewRoute = Ember.Route.extend({
+App.RegistrationRoute = Ember.Route.extend({
   model: function() {
     return this.get('store').createRecord('user');
   },
 
   deactivate: function() {
-    var m = this.modelFor('users.new');
+    var m = this.modelFor('registration');
     if (m.get('isDirty')) {
       m.deleteRecord();
     }
