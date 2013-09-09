@@ -4,8 +4,7 @@ App.Router.map(function() {
       this.route('new');
     });
     this.resource('match', {path: "/matches/:match_id"});
-    this.resource('users', {path: "/users"}, function(){
-    });
+    this.resource('users', {path: "/users"});
     this.resource('user', {path: "/users/:user_id"});
     this.resource('statistics', {path: "/statistics"});
   });
