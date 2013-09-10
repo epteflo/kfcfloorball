@@ -2,7 +2,10 @@ class MatchesController < ApplicationController
   respond_to :json
 
   def index
-    matches = Match.where('state!="deleted"').order("id desc").limit(25)
+    matches = Match.where('state!="deleted"')
+                   .includes(checkins: :user)
+                   .order("id desc")
+                   .limit(25)
     respond_with matches
   end
 
