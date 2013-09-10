@@ -1,4 +1,5 @@
-{{#link-to 'match' this.id tagName='div' class='row match match-rsvp'}}
+{{#link-to 'match' this.id tagName='div'
+      classNameBindings=':row :match :match-rsvp isCurrentUserOk isCurrentUserNok'}}
   {{#if isCurrentUserNotResponded}}
     <div class="col-xs-6 text-center">
       <button {{action rsvp 'ok'}} class="btn btn-success btn-mini">Jövök</button>
@@ -8,11 +9,17 @@
     </div>
   {{/if}}
   {{#if isCurrentUserOk}}
-    Te jössz
-    <button {{action rsvp 'nok'}} class="btn btn-danger">Mégsem Jövök</button>
+    <div class="rsvp-ok">
+      <div class="col-xs-10 text-center title">Jelentkeztél a meccsre.</div>
+      <div class="col-xs-2">
+        <button {{action rsvp 'nok'}} class="btn btn-danger pull-right">Mégsem Jövök</button>
+      </div>
+    </div>
   {{/if}}
   {{#if isCurrentUserNok}}
-    Nem jössz
-    <button {{action rsvp 'ok'}} class="btn btn-success">Mégis Jövök</button>
+    <div class="col-xs-10 text-center title">Kihagyod ezt a meccset.</div>
+    <div class="col-xs-2">
+        <button {{action rsvp 'ok'}} class="btn btn-success">Mégis Jövök</button>
+      </div>
   {{/if}}
 {{/link-to}}

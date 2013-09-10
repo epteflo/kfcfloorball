@@ -26,6 +26,7 @@ $sunflower: #F1C40F;
 $wet: #34495E;
 $carrot: #E67E22;
 $orange: #F39C12;
+$alazirin: #E74C3C;
 
 body {
   background-color: white;
@@ -46,6 +47,19 @@ ul {
 .match-rsvp {
   background-color: $wet;
   color: white;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold
+  }
+}
+
+.match-rsvp.is-current-user-ok {
+  background-color: $emerald;
+}
+
+.match-rsvp.is-current-user-nok {
+  background-color: $alazirin;
 }
 
 .match-result {
