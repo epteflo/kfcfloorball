@@ -10,9 +10,9 @@ Kfcfloorball::Application.routes.draw do
   root 'application#page'
 
   resources :matches
-  #resources :checkins, :only => [:create, :update]
-  post 'matches/:id/checkin' => 'checkins#create', as: :create_checkin
-  put 'matches/:id/checkin' => 'checkins#update', as: :update_checkin
+  resources :checkins, :only => [:create, :update]
+  # post 'matches/:id/checkin' => 'checkins#create', as: :create_checkin
+  # put 'matches/:id/checkin' => 'checkins#update', as: :update_checkin
 
   resources :users, :only => [:create, :update, :show, :index]
 

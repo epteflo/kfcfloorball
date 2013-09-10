@@ -4,5 +4,6 @@ App.Checkin = DS.Model.extend({
   order_in_team: DS.attr('number'),
   state: DS.attr('string'),
   team: DS.attr('string'),
-  user: DS.belongsTo('user')
+  user: DS.belongsTo('user'),
+  match: DS.belongsTo('match')
 });

@@ -1,8 +1,18 @@
 {{#link-to 'match' this.id tagName='div' class='row match match-rsvp'}}
-  <div class="col-xs-6 text-center">
-    <button class="btn btn-success btn-mini">Jövök</button>
-  </div>
-  <div class="col-xs-6 text-center">
-    <button class="btn btn-danger">Nem Jövök</button>
-  </div>
+  {{#if isCurrentUserNotResponded}}
+    <div class="col-xs-6 text-center">
+      <button {{action rsvp 'ok'}} class="btn btn-success btn-mini">Jövök</button>
+    </div>
+    <div class="col-xs-6 text-center">
+      <button {{action rsvp 'nok'}} class="btn btn-danger">Nem Jövök</button>
+    </div>
+  {{/if}}
+  {{#if isCurrentUserOk}}
+    Te jössz
+    <button {{action rsvp 'nok'}} class="btn btn-danger">Mégsem Jövök</button>
+  {{/if}}
+  {{#if isCurrentUserNok}}
+    Nem jössz
+    <button {{action rsvp 'ok'}} class="btn btn-success">Mégis Jövök</button>
+  {{/if}}
 {{/link-to}}

@@ -3,7 +3,7 @@ class MatchesController < ApplicationController
 
   def index
     matches = Match.where('state!="deleted"').order("id desc").limit(25)
-    render json: {matches: matches}
+    respond_with matches
   end
 
   def show

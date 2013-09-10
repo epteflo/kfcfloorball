@@ -21,18 +21,19 @@
       </div>
     </div>
   </div>
+
   <div class="col-md-9">
-    {{#link-to 'match' this.id tagName='div' class='row'}}
-      <div class="match-result clearfix">
-        <div class="col-xs-4 col-md-push-1 team white">Fehér</div>
-        <div class="col-xs-2 score white text-right">{{aScore}}</div>
-        <div class="col-xs-2 score black">{{bScore}}</div>
-        <div class="col-xs-4 col-md-pull-1 text-right team black">Fekete</div>
-      </div>
-    {{/link-to}}
+    {{#if isStateRSVP}}
+      {{partial 'matches/state_rsvp'}}
+    {{else}}
+      {{partial 'matches/state_played'}}
+    {{/if}}
 
     <br>
     <div class="row teams">
+      {{#if isStateRSVP}}
+        {{partial 'matches/team_rsvp'}}
+      {{/if}}
       {{#if isDistributionOnField}}
         {{partial 'matches/distribution_onfield'}}
       {{/if}}

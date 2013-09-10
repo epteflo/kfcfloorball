@@ -1,0 +1,23 @@
+<div class="col-md-6">
+  <h5>Jönnek:</h5>
+  <ul>
+    {{#each okCheckins}}
+      <li>
+        <i class="glyphicon glyphicon-user"></i>
+        {{user.name}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="col-md-6">
+  <h5>Nem jönnek</h5>
+  <ul>
+    {{#each nokCheckins}}
+      <li>
+        <i class="glyphicon glyphicon-user"></i>
+        {{user.name}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
