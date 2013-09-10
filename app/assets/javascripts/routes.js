@@ -57,6 +57,7 @@ App.LoginRoute = Ember.Route.extend({
       ).done(function(result) {
         localStorage.authToken = result.user.authentication_token;
         localStorage.user = JSON.stringify(result.user);
+        loginController.set('password', '');
 
         var transition = applicationController.get('savedTransition');
 
@@ -127,14 +128,7 @@ App.UsersRoute = Ember.Route.extend({
 
 App.RegistrationRoute = Ember.Route.extend({
   model: function() {
-    return this.get('store').createRecord('user');
-  },
-
-  deactivate: function() {
-    var m = this.modelFor('registration');
-    if (m.get('isDirty')) {
-      m.deleteRecord();
-    }
+    return Ember.Object.create();
   }
 });
 

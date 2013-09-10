@@ -7,10 +7,16 @@
       </div>
     {{/if}}
 
+    {{#if successMessage}}
+      <div class="alert-success alert">
+        {{successMessage}}
+      </div>
+    {{/if}}
+
     <form role="form" {{action "login" on="submit"}}>
       <div class="form-group">
         <label for="formEmail">Email cím</label>
-        {{input type='text' class="form-control" value=email id='formEmail' placeholder='Login név'}}
+        {{input type='text' class="form-control" value=email id='formEmail'}}
       </div>
       <div class="form-group">
         <label for="formPassword">Jelszó</label>
