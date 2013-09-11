@@ -2,6 +2,10 @@ Ember.Handlebars.registerBoundHelper('day', function(value){
   return Em.isEmpty(value) ? '' : moment(value).format('ll');
 });
 
+Ember.Handlebars.registerBoundHelper('daytime', function(value){
+  return Em.isEmpty(value) ? '' : moment(value).format('YYYY. MMM. D. h:m');
+});
+
 Ember.Handlebars.registerBoundHelper('repeat-icon', function(count, options) {
   var out = "";
   while (count--) {
