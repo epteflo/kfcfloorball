@@ -6,7 +6,8 @@ class CheckinsController < ApplicationController
     match_id = p[:match]
     state = p[:state]
 
-    checkin = Checkin.new({user_id: user_id, match_id: match_id, state: state})
+    checkin = Checkin.find_or_initialize_by_user_id_and_match_id(user_id, match_id)
+    checkin.state = state
     checkin.save
 
     render json: ""
@@ -20,6 +21,7 @@ class CheckinsController < ApplicationController
   end
 
   private
+
     def checkin_params
       params.require(:checkin).permit(:state, :user, :match, :assist, :goal, :order_in_team, :team)
     end
