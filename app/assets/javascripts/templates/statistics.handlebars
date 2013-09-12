@@ -1,15 +1,15 @@
 <table class="table">
   <thead>
-    <th>Becenév</th>
-    <th>Gólok</th>
-    <th>Gólpasszok</th>
-    <th>Pont</th>
-    <th>Pont / Meccs</th>
+    <th {{action toggleSort 'user.name'}}>Név</th>
+    <th {{action toggleSort 'goals'}}>Gólok</th>
+    <th {{action toggleSort 'assists'}}>Gólpasszok</th>
+    <th {{action toggleSort 'points'}}>Pont</th>
+    <th {{action toggleSort 'pointsPerMatch'}}>Pont / Meccs</th>
   </thead>
   <tbody>
     {{#each arrangedContent}}
       <tr>
-        <td>{{#link-to 'user' user}}{{user.nickname}}{{/link-to}}</td>
+        <td>{{#link-to 'user' user}}{{user.name}}{{/link-to}}</td>
         <td>{{goals}}</td>
         <td>{{assists}}</td>
         <td>{{points}}</td>
